@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="../../styles/m_stylesheet.css">
+</head>
+<body>
+
+    <div id="screen-container">
+        <header>
+            <h1>Welcome, Dylan</h1>
+            <div id="datetime"></div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab" onclick="switchTab('tab1')">Daily Routine</button>
+            <button class="tab" onclick="switchTab('tab2')">Fitness Tracker</button>
+            <button class="tab" onclick="switchTab('tab3')">Stardew Tracker</button>
+        </div>
+
+        <div class="tab-container">
+            <div id="tab1" class="tab-content" style="display:none">
+                <p>Daily Routine</p>
+            </div>
+            <div id="tab2" class="tab-content" style="display:none;">
+                <p>Fitness Tracker content</p>
+            </div>
+
+
+
+            <!-- STARDEW VALLEY COMMUNITY CENTER CHECKLIST -->
+            <div id="tab3" class="tab-content" style="display:block;">
+                <div class="season" id="spring">
+
+                    <!-- SPRING -->
+                    <div class="category" id="farming-foraging">
+                        <h2>Spring Farming / Foraging</h2>
+                        <div>
+                            <label for="gold-parsnip">Gold Parsnips x5</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="parsnip">Parsnip</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="potato">Potato</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="cauliflower">Cauliflower</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="green-beans">Green Beans</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="dandelion">Dandelion x1</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="leek">Leek x1</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="horseradish">Horseradish x1</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="daffodil">Daffodil</label>
+                            <input type="checkbox">
+                        </div>
+                        
+                    </div>
+                    <div class="category" id="fishing">
+                        <h2>Spring Fishing</h2>
+                        <div>
+                            <label for="catfish">Catfish 6AM/2AM Spring River</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="catfish">Eel 4PM/2AM Spring Ocean Raining</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="catfish">Sardine 6AM/7PM Spring Ocean</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="shad">Shad 9AM/2PM Spring River Raining</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="catfish">Sunfish 6AM/7PM Spring Ocean Sunny</label>
+                            <input type="checkbox">
+                        </div>
+
+                    </div>
+                </div>
+                <p>--------------------</p>
+                
+                <!-- SUMMER -->
+                <div class="season" id="summer">
+                    <div class="category" id="farming-foraging">
+                        <h2>Summer Farming / Foraging</h2>
+                        <div>
+                            <label for="gold-melon">Gold Melon x5</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="pepper">Pepper</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="melon">Melon</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="tomato">Tomato</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="blueberries">Blueberries</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="grapefruit">Grape</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="spiceberry">Spice Berry</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="spiceberry">Sweet Pea</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="fern">Fern</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="poppy">Poppy</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="hay">Hay x10</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="apple">Apple</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="pomegranate">Pomegranate</label>
+                            <input type="checkbox">
+                        </div>
+                        
+                    </div>
+                    <div class="category" id="fishing">
+                        <h2>Summer Fishing</h2>
+                        
+                        <div>
+                            <label for="pufferfish">Pufferfish 10PM/4PM Ocean SUNNY</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="redmullet">Red Mullet 6AM/7PM Ocean</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="sturgeon">Sturgeon 6AM/7PM Mountain Lake</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="shad">Tilapia 6AM/2PM Ocean</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="tuna">Tuna 6AM/7PM Ocean</label>
+                            <input type="checkbox">
+                        </div>
+
+                </div>
+
+                <div class="season" id="fall">
+
+                    <!-- FALL -->
+                    <div class="category" id="farming-foraging">
+                        <h2>Fall Farming / Foraging</h2>
+                        <div>
+                            <label for="gold-corn">Gold Corn x5</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="pumpkin">Pumpkin</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="yam">Yam</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="corn">Corn</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="eggplant">Eggplant</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="blueberry">Blueberry</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="hazelnut">Hazelnut</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="horseradish">Horseradish x1</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="daffodil">Daffodil</label>
+                            <input type="checkbox">
+                        </div>
+                        
+                    </div>
+                    <div class="category" id="fishing">
+                        <h2>Fall Fishing</h2>
+                        <div>
+                            <label for="catfish">Catfish 6AM/2AM Spring River</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="catfish">Eel 4PM/2AM Spring Ocean Raining</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="catfish">Sardine 6AM/7PM Spring Ocean</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="shad">Shad 9AM/2PM Spring River Raining</label>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <label for="catfish">Sunfish 6AM/7PM Spring Ocean Sunny</label>
+                            <input type="checkbox">
+                        </div>
+
+                    </div>
+                </div>
+                <p>--------------------</p>
+            </div>
+
+            
+        </div>
+        
+
+
+    <script src="../../javascript/dateTime.js" defer></script>
+    <script src="../../javascript/dom.js" defer></script>
+</body>
+</html>

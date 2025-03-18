@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#screen-container {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(15,42,69);
+    color: #333;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+/* ------- Content --------*/
+
+header {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* -------- Tabs -------- */
+.tabs {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.tabs button { /* Buttons */
+    background-color: rgb(7, 24, 41);
+    border: none;
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.tab-container {
+    margin-top: 5%;
+    border: 1px solid;
+    height: 90%
+}
+
+/* ----- Stardew Valley items ----- */
+.category {
+    display: flex;
+    flex-direction: column;
+}
+
+.category h2 {
+    margin-top: 20px;
+}
