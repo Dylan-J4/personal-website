@@ -77,8 +77,8 @@
                         <div class="container mt-5 calendar-container">
                             <h2 class="text-center" id="calendar-title">Calendar for <span id="month-year"></span></h2>
                             <div class="d-flex justify-content-between mb-3">
-                              <button class="btn btn-primary" onclick="changeMonth(-1)">Previous Month</button>
-                              <button class="btn btn-primary" onclick="changeMonth(1)">Next Month</button>
+                              <button class="btn btn-primary" id="prev-btn">Previous Month</button>
+                              <button class="btn btn-primary" id="next-btn">Next Month</button>
                             </div>
                             <table class="table table-bordered calendar-table">
                               <thead>
@@ -97,6 +97,9 @@
                               </tbody>
                             </table>
                           </div>
+                        <button class="file-btn "id="export-btn">Export</button>
+                        <input type="file" id="import-file" style="display: none;" accept=".json">
+                        <button class="file-btn" id="import-btn">Import</button>
                     </div>
                 </div>
             </div>
