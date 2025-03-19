@@ -5,23 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="../../styles/m_stylesheet.css">
-</head>
+<script defer src="/bundle.js"></script></head>
 <body>
 
     <div id="screen-container">
         <header>
-            <h1>Welcome, Dylan</h1>
+            <div class="header-welcome"><h1>Welcome, Dylan</h1>
+                </div>
+            </div>
+            
             <div id="datetime"></div>
         </header>
 
         <div class="tabs">
-            <button class="tab" onclick="switchTab('tab1')">Daily Routine</button>
-            <button class="tab" onclick="switchTab('tab2')">Fitness Tracker</button>
-            <button class="tab" onclick="switchTab('tab3')">Stardew Tracker</button>
+            <button class="tab" data-tab="tab1">Daily Routine</button>
+            <button class="tab" data-tab="tab2">Fitness Tracker</button>
+            <button class="tab" data-tab="tab3">Stardew Tracker</button>
+
         </div>
 
         <div class="tab-container">
-            <div id="tab1" class="tab-content" style="display:none">
+
+            <div id="signup-tab" class="tab-content" style="display:none;">
+                <div class="signup-container">
+                  <div class="signup-form">
+                    <h2>Sign up to save progress</h2>
+                    <form id="signup-form">
+                      <input type="text" id="signup-name" placeholder="First name">
+                      <input type="email" id="signup-email" placeholder="Email address" required>
+                      <input type="password" id="signup-password" placeholder="Password" required>
+                      <button type="submit" id="signup-submit-btn">Sign Up</button>
+                    </form>
+                    <p id="signup-message"></p>
+                  </div>
+                </div>
+              </div>
+
+            <div id="login-tab" class="tab-content" style="display:none">
+                <div class="login-container">
+                    <div class="login-form">
+                        <h2>Login</h2>
+                        <form id="login-form">
+                            <input type="email" id="login-email" placeholder="Email address" required>
+                            <input type="password" id="login-password" placeholder="Password" required>
+                            <button type="submit" id="login-submit-btn">Log in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>  
+              
+
+            <div id="tab1" class="tab-content" style="display:none;">
                 <p>Daily Routine</p>
             </div>
             <div id="tab2" class="tab-content" style="display:none;">
@@ -31,7 +65,7 @@
 
 
             <!-- STARDEW VALLEY COMMUNITY CENTER CHECKLIST -->
-            <div id="tab3" class="tab-content" style="display:block;">
+            <div id="tab3" class="tab-content" style="display:none;">
                 <div class="season" id="spring">
 
                     <!-- SPRING -->
@@ -259,10 +293,8 @@
 
             
         </div>
-        
+    <script src="../../dateTime.js" defer ></script>
+    <script src="../../dom.js"></script>
 
-
-    <script src="../../javascript/dateTime.js" defer></script>
-    <script src="../../javascript/dom.js" defer></script>
 </body>
 </html>
