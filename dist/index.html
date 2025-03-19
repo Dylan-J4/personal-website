@@ -10,291 +10,175 @@
 
     <div id="screen-container">
         <header>
-            <div class="header-welcome"><h1>Welcome, Dylan</h1>
-                </div>
+            <div class="header-welcome">
+                <h1>Welcome, Dylan</h1>
             </div>
-            
             <div id="datetime"></div>
         </header>
 
+        <!-- Tab Buttons -->
         <div class="tabs">
             <button class="tab" data-tab="tab1">Daily Routine</button>
             <button class="tab" data-tab="tab2">Fitness Tracker</button>
             <button class="tab" data-tab="tab3">Stardew Tracker</button>
-
         </div>
 
+        <!-- Tab Content -->
         <div class="tab-container">
 
-            <div id="signup-tab" class="tab-content" style="display:none;">
-                <div class="signup-container">
-                  <div class="signup-form">
-                    <h2>Sign up to save progress</h2>
-                    <form id="signup-form">
-                      <input type="text" id="signup-name" placeholder="First name">
-                      <input type="email" id="signup-email" placeholder="Email address" required>
-                      <input type="password" id="signup-password" placeholder="Password" required>
-                      <button type="submit" id="signup-submit-btn">Sign Up</button>
-                    </form>
-                    <p id="signup-message"></p>
-                  </div>
-                </div>
-              </div>
-
-            <div id="login-tab" class="tab-content" style="display:none">
-                <div class="login-container">
-                    <div class="login-form">
-                        <h2>Login</h2>
-                        <form id="login-form">
-                            <input type="email" id="login-email" placeholder="Email address" required>
-                            <input type="password" id="login-password" placeholder="Password" required>
-                            <button type="submit" id="login-submit-btn">Log in</button>
-                        </form>
-                    </div>
-                </div>
-            </div>  
-              
-
-            <div id="tab1" class="tab-content" style="display:none;">
+            <div id="tab1" class="tab-content">
                 <p>Daily Routine</p>
             </div>
-            <div id="tab2" class="tab-content" style="display:none;">
-                <p>Fitness Tracker content</p>
+
+
+
+
+
+
+            <div id="tab2" class="tab-content" style="display:block;">
+                <div class="days-tabs-container">
+                    <button class="days-btn" data-tab="day1">Arm Exercises</button>
+                    <button class="days-btn" data-tab="calendar">Calendar</button>
+                </div>
+
+                <div class="days-container">
+                    <div class="days-content" id="day1">
+                        <div class="workout" id="bicep-curls">
+                            <h4>Arm workout, 3 days a week</h4>
+                            <ul>Bicep Curls</ul>
+                            <li>Stand with feet shoulder-width apart.</li>
+                            <li>Hold a dumbbell in each hand, palms facing up.</li>
+                            <li>Curl the dumbbells towards your shoulders.</li>
+                            <li>Slowly lower them back down.</li>
+                        </div>
+                        <div class="workout" id="hammer-curls">
+                            <ul>Hammer Curls</ul>
+                            <li>Hold dumbbells with palms facing each other.</li>
+                            <li>Curl both arms up at the same time.</li>
+                            <li>Keep elbows close to your body.</li>
+                        </div>
+                        <div class="workout" id="overhead-tricep-extensions">
+                            <ul>Overhead Tricep Extensions</ul>
+                            <li>Hold one dumbbell with both hands.</li>
+                            <li>Lift it overhead, arms straight.</li>
+                            <li>Lower the dumbbell behind your head by bending your elbows.</li>
+                            <li>Extend your arms back up.</li>
+                        </div>
+                        <div class="workout" id="lateral-raises">
+                            <ul>Lateral Raises</ul>
+                            <li>Hold a dumbbell in each hand, arms at your sides.</li>
+                            <li>Raise your arms out to the sides until shoulder height.</li>
+                            <li>Lower slowly.</li>
+                        </div>
+                    </div>
+
+                    
+                    <div class="days-content" id="calendar">Calendar
+                        <div class="container mt-5 calendar-container">
+                            <h2 class="text-center" id="calendar-title">Calendar for <span id="month-year"></span></h2>
+                            <div class="d-flex justify-content-between mb-3">
+                              <button class="btn btn-primary" onclick="changeMonth(-1)">Previous Month</button>
+                              <button class="btn btn-primary" onclick="changeMonth(1)">Next Month</button>
+                            </div>
+                            <table class="table table-bordered calendar-table">
+                              <thead>
+                                <tr>
+                                  <th>Sun</th>
+                                  <th>Mon</th>
+                                  <th>Tue</th>
+                                  <th>Wed</th>
+                                  <th>Thu</th>
+                                  <th>Fri</th>
+                                  <th>Sat</th>
+                                </tr>
+                              </thead>
+                              <tbody id="calendar-body">
+                                <!-- Days will be inserted here -->
+                              </tbody>
+                            </table>
+                          </div>
+                    </div>
+                </div>
             </div>
 
 
 
-            <!-- STARDEW VALLEY COMMUNITY CENTER CHECKLIST -->
-            <div id="tab3" class="tab-content" style="display:none;">
-                <div class="season" id="spring">
 
-                    <!-- SPRING -->
+
+
+            <!-- Stardew Valley Tracker -->
+            <div id="tab3" class="tab-content">
+                <!-- SPRING -->
+                <div class="season" id="spring">
                     <div class="category" id="farming-foraging">
                         <h2>Spring Farming / Foraging</h2>
                         <div>
                             <label for="gold-parsnip">Gold Parsnips x5</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="gold-parsnip">
                         </div>
                         <div>
                             <label for="parsnip">Parsnip</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="parsnip">
                         </div>
                         <div>
                             <label for="potato">Potato</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="potato">
                         </div>
                         <div>
                             <label for="cauliflower">Cauliflower</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="cauliflower">
                         </div>
                         <div>
                             <label for="green-beans">Green Beans</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="green-beans">
                         </div>
                         <div>
                             <label for="dandelion">Dandelion x1</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="dandelion">
                         </div>
                         <div>
                             <label for="leek">Leek x1</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="leek">
                         </div>
                         <div>
                             <label for="horseradish">Horseradish x1</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="horseradish">
                         </div>
                         <div>
                             <label for="daffodil">Daffodil</label>
-                            <input type="checkbox">
+                            <input type="checkbox" id="daffodil">
                         </div>
-                        
                     </div>
+
                     <div class="category" id="fishing">
                         <h2>Spring Fishing</h2>
                         <div>
-                            <label for="catfish">Catfish 6AM/2AM Spring River</label>
-                            <input type="checkbox">
+                            <label for="catfish-spring">Catfish 6AM/2AM Spring River</label>
+                            <input type="checkbox" id="catfish-spring">
                         </div>
                         <div>
-                            <label for="catfish">Eel 4PM/2AM Spring Ocean Raining</label>
-                            <input type="checkbox">
+                            <label for="eel-spring">Eel 4PM/2AM Spring Ocean Raining</label>
+                            <input type="checkbox" id="eel-spring">
                         </div>
                         <div>
-                            <label for="catfish">Sardine 6AM/7PM Spring Ocean</label>
-                            <input type="checkbox">
+                            <label for="sardine-spring">Sardine 6AM/7PM Spring Ocean</label>
+                            <input type="checkbox" id="sardine-spring">
                         </div>
                         <div>
-                            <label for="shad">Shad 9AM/2PM Spring River Raining</label>
-                            <input type="checkbox">
+                            <label for="shad-spring">Shad 9AM/2PM Spring River Raining</label>
+                            <input type="checkbox" id="shad-spring">
                         </div>
                         <div>
-                            <label for="catfish">Sunfish 6AM/7PM Spring Ocean Sunny</label>
-                            <input type="checkbox">
+                            <label for="sunfish-spring">Sunfish 6AM/7PM Spring Ocean Sunny</label>
+                            <input type="checkbox" id="sunfish-spring">
                         </div>
-
                     </div>
                 </div>
-                <p>--------------------</p>
-                
-                <!-- SUMMER -->
-                <div class="season" id="summer">
-                    <div class="category" id="farming-foraging">
-                        <h2>Summer Farming / Foraging</h2>
-                        <div>
-                            <label for="gold-melon">Gold Melon x5</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="pepper">Pepper</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="melon">Melon</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="tomato">Tomato</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="blueberries">Blueberries</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="grapefruit">Grape</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="spiceberry">Spice Berry</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="spiceberry">Sweet Pea</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="fern">Fern</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="poppy">Poppy</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="hay">Hay x10</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="apple">Apple</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="pomegranate">Pomegranate</label>
-                            <input type="checkbox">
-                        </div>
-                        
-                    </div>
-                    <div class="category" id="fishing">
-                        <h2>Summer Fishing</h2>
-                        
-                        <div>
-                            <label for="pufferfish">Pufferfish 10PM/4PM Ocean SUNNY</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="redmullet">Red Mullet 6AM/7PM Ocean</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="sturgeon">Sturgeon 6AM/7PM Mountain Lake</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="shad">Tilapia 6AM/2PM Ocean</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="tuna">Tuna 6AM/7PM Ocean</label>
-                            <input type="checkbox">
-                        </div>
-
-                </div>
-
-                <div class="season" id="fall">
-
-                    <!-- FALL -->
-                    <div class="category" id="farming-foraging">
-                        <h2>Fall Farming / Foraging</h2>
-                        <div>
-                            <label for="gold-corn">Gold Corn x5</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="pumpkin">Pumpkin</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="yam">Yam</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="corn">Corn</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="eggplant">Eggplant</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="blueberry">Blueberry</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="hazelnut">Hazelnut</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="horseradish">Horseradish x1</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="daffodil">Daffodil</label>
-                            <input type="checkbox">
-                        </div>
-                        
-                    </div>
-                    <div class="category" id="fishing">
-                        <h2>Fall Fishing</h2>
-                        <div>
-                            <label for="catfish">Catfish 6AM/2AM Spring River</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="catfish">Eel 4PM/2AM Spring Ocean Raining</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="catfish">Sardine 6AM/7PM Spring Ocean</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="shad">Shad 9AM/2PM Spring River Raining</label>
-                            <input type="checkbox">
-                        </div>
-                        <div>
-                            <label for="catfish">Sunfish 6AM/7PM Spring Ocean Sunny</label>
-                            <input type="checkbox">
-                        </div>
-
-                    </div>
-                </div>
-                <p>--------------------</p>
             </div>
-
-            
         </div>
-    <script src="../../dateTime.js" defer ></script>
-    <script src="../../dom.js"></script>
+    </div>
+
+    <!-- Scripts -->
 
 </body>
 </html>

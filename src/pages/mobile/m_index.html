@@ -30,12 +30,87 @@
                 <p>Daily Routine</p>
             </div>
 
-            <div id="tab2" class="tab-content" style="display:none;">
-                <p>Fitness Tracker content</p>
+
+
+
+
+
+            <div id="tab2" class="tab-content" style="display:block;">
+                <div class="days-tabs-container">
+                    <button class="days-btn" data-tab="day1">Arm Exercises</button>
+                    <button class="days-btn" data-tab="calendar">Calendar</button>
+                </div>
+
+                <div class="days-container">
+                    <div class="days-content" id="day1">
+                        <div class="workout" id="bicep-curls">
+                            <h4>Arm workout, 3 days a week</h4>
+                            <ul>Bicep Curls</ul>
+                            <li>Stand with feet shoulder-width apart.</li>
+                            <li>Hold a dumbbell in each hand, palms facing up.</li>
+                            <li>Curl the dumbbells towards your shoulders.</li>
+                            <li>Slowly lower them back down.</li>
+                        </div>
+                        <div class="workout" id="hammer-curls">
+                            <ul>Hammer Curls</ul>
+                            <li>Hold dumbbells with palms facing each other.</li>
+                            <li>Curl both arms up at the same time.</li>
+                            <li>Keep elbows close to your body.</li>
+                        </div>
+                        <div class="workout" id="overhead-tricep-extensions">
+                            <ul>Overhead Tricep Extensions</ul>
+                            <li>Hold one dumbbell with both hands.</li>
+                            <li>Lift it overhead, arms straight.</li>
+                            <li>Lower the dumbbell behind your head by bending your elbows.</li>
+                            <li>Extend your arms back up.</li>
+                        </div>
+                        <div class="workout" id="lateral-raises">
+                            <ul>Lateral Raises</ul>
+                            <li>Hold a dumbbell in each hand, arms at your sides.</li>
+                            <li>Raise your arms out to the sides until shoulder height.</li>
+                            <li>Lower slowly.</li>
+                        </div>
+                    </div>
+
+                    
+                    <div class="days-content" id="calendar">Calendar
+                        <div class="container mt-5 calendar-container">
+                            <h2 class="text-center" id="calendar-title">Calendar for <span id="month-year"></span></h2>
+                            <div class="d-flex justify-content-between mb-3">
+                              <button class="btn btn-primary" id="prev-btn">Previous Month</button>
+                              <button class="btn btn-primary" id="next-btn">Next Month</button>
+                            </div>
+                            <table class="table table-bordered calendar-table">
+                              <thead>
+                                <tr>
+                                  <th>Sun</th>
+                                  <th>Mon</th>
+                                  <th>Tue</th>
+                                  <th>Wed</th>
+                                  <th>Thu</th>
+                                  <th>Fri</th>
+                                  <th>Sat</th>
+                                </tr>
+                              </thead>
+                              <tbody id="calendar-body">
+                                <!-- Days will be inserted here -->
+                              </tbody>
+                            </table>
+                          </div>
+                        <button class="file-btn "id="export-btn">Export</button>
+                        <input type="file" id="import-file" style="display: none;" accept=".json">
+                        <button class="file-btn" id="import-btn">Import</button>
+                    </div>
+                </div>
             </div>
 
+
+
+
+
+
             <!-- Stardew Valley Tracker -->
-            <div id="tab3" class="tab-content" style="display:none;">
+            <div id="tab3" class="tab-content">
                 <!-- SPRING -->
                 <div class="season" id="spring">
                     <div class="category" id="farming-foraging">
@@ -107,7 +182,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../../dateTime.js" defer></script>
-    <script src="../../dom.js" defer></script>
+
 </body>
 </html>
